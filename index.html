@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#24101e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="قلبي وقلبك">
+<title>بين قلبي وقلبك ❤️</title>
+<style>
+:root{
+  --bg:#160a13;--bg2:#3a102c;--glass:rgba(255,255,255,.09);--line:rgba(255,255,255,.14);
+  --paper:#fff9fc;--ink:#351226;--muted:#7f6473;--pink:#e24888;--rose:#ff93bd;
+  --deep:#a6205d;--soft:#fbe0ec;--gold:#f9cf75;--ok:#2a936a;
+  --shadow:0 28px 80px rgba(10,0,7,.44)
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%;overscroll-behavior:none}
+body{
+  margin:0;color:white;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 12% 5%,rgba(255,147,189,.27),transparent 25%),
+    radial-gradient(circle at 92% 35%,rgba(255,255,255,.08),transparent 22%),
+    linear-gradient(155deg,var(--bg2),var(--bg) 72%);
+  padding:calc(env(safe-area-inset-top) + 12px) 14px calc(env(safe-area-inset-bottom) + 16px);
+  overflow-x:hidden
+}
+button,textarea{font:inherit}
+button{border:0;cursor:pointer;touch-action:manipulation}
+.bg-hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.bg-heart{position:absolute;bottom:-70px;opacity:.12;animation:float linear infinite;filter:blur(.2px)}
+@keyframes float{to{transform:translateY(-120vh) rotate(35deg);opacity:0}}
+.app{max-width:590px;margin:auto;min-height:calc(100vh - 28px);display:flex;align-items:center}
+.shell{width:100%;background:var(--glass);border:1px solid var(--line);border-radius:31px;padding:16px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:var(--shadow)}
+.screen{display:none;animation:screenIn .35s cubic-bezier(.2,.8,.2,1)}
+.screen.active{display:block}
+@keyframes screenIn{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+.top-actions{display:flex;justify-content:flex-end;gap:8px;margin-bottom:8px}
+.icon-btn{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.1);color:white;border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;font-size:18px}
+.hero{text-align:center;padding:10px 5px 2px}
+.logo{width:92px;height:92px;border-radius:32px;margin:2px auto 17px;display:grid;place-items:center;font-size:48px;background:linear-gradient(145deg,#ffb1d0,#d9367c);box-shadow:0 17px 44px rgba(226,72,136,.42);position:relative}
+.logo:after{content:"";position:absolute;inset:-7px;border:1px solid rgba(255,255,255,.23);border-radius:38px}
+h1{font-size:31px;letter-spacing:-.7px;margin:0 0 8px}
+.subtitle{margin:0 auto 21px;color:#f5d5e3;line-height:1.9;max-width:470px}
+.names{display:flex;align-items:center;justify-content:center;gap:11px;margin:6px 0 21px;font-size:20px;font-weight:900}.names .heart{color:#ff9bc3;animation:pulse 1.6s infinite}@keyframes pulse{50%{transform:scale(1.2)}}
+.card{background:var(--paper);color:var(--ink);border-radius:25px;padding:21px;box-shadow:0 16px 38px rgba(17,0,10,.25);position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(255,147,189,.12),transparent 68%);left:-75px;top:-82px;pointer-events:none}
+h2{margin:0 0 10px;font-size:23px}.body-text{color:#725567;line-height:1.95;margin:0}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:17px 0}.feature{background:white;border:1px solid #f0dbe5;border-radius:16px;padding:11px;text-align:center;color:#775568;font-size:13px;font-weight:750}.feature b{display:block;color:#9b2457;font-size:18px;margin-bottom:3px}
+.btn{width:100%;border-radius:17px;padding:15px 16px;margin-top:11px;font-weight:900;font-size:17px;transition:transform .12s ease,filter .12s ease;position:relative;overflow:hidden}.btn:active{transform:scale(.985);filter:brightness(.97)}
+.primary{color:#fff;background:linear-gradient(135deg,var(--pink),var(--deep));box-shadow:0 12px 27px rgba(226,72,136,.25)}.soft{background:var(--soft);color:#8e2455}.glass{background:rgba(255,255,255,.11);color:#fff;border:1px solid rgba(255,255,255,.17)}.outline{background:white;color:#8d2755;border:1px solid #efd5e1}.danger{background:transparent;color:#ffd6e7;border:1px solid rgba(255,255,255,.18)}
+.privacy-note{text-align:center;color:#f1cbdd;font-size:12px;line-height:1.7;margin:14px 3px 0}
+.topline{display:flex;justify-content:space-between;align-items:center;color:#f4d4e2;font-size:13px;margin:2px 2px 10px}.progress{height:8px;background:rgba(255,255,255,.13);border-radius:99px;overflow:hidden;margin-bottom:16px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff85b6,#fff);border-radius:99px;transition:width .35s ease}
+.pill{display:inline-flex;align-items:center;gap:7px;background:var(--soft);color:#88204f;border-radius:99px;padding:8px 13px;font-weight:900;margin-bottom:15px}.question{font-size:24px;font-weight:900;line-height:1.67;letter-spacing:-.35px;margin:0 0 16px}.answer-wrap{position:relative}textarea{width:100%;min-height:150px;border:1.5px solid #ecd4df;background:white;border-radius:19px;padding:15px 15px 34px;color:var(--ink);outline:none;resize:none;font-size:17px;line-height:1.7}textarea:focus{border-color:var(--pink);box-shadow:0 0 0 4px rgba(226,72,136,.09)}.counter{position:absolute;bottom:10px;left:13px;color:#a18594;font-size:11px}.hint{font-size:12px;color:var(--muted);line-height:1.65;margin:8px 2px 0}.error{min-height:19px;color:#a5144a;font-weight:800;font-size:12px;margin:7px 2px 0}
+.handoff{text-align:center;padding:5px 0}.phone-orb{width:94px;height:94px;border-radius:32px;margin:4px auto 16px;display:grid;place-items:center;font-size:43px;background:linear-gradient(145deg,#ffe7f1,#ffc8de);box-shadow:0 13px 35px rgba(188,48,103,.18)}.small-label{font-size:12px;color:#8e7181;font-weight:800}.handoff-name{font-size:31px;color:#9d245a;font-weight:950;margin:4px 0 9px}.handoff-copy{color:#76596a;line-height:1.9;margin:0 0 6px}.privacy-lock{display:inline-flex;gap:6px;align-items:center;margin-top:7px;color:#8a6b7b;font-size:12px}
+.challenge{text-align:center}.challenge-icon{font-size:62px;margin:2px 0 9px}.timer-ring{width:125px;height:125px;border-radius:50%;margin:12px auto;display:grid;place-items:center;background:conic-gradient(var(--pink) var(--angle,0deg),#f4dae6 0);position:relative}.timer-ring:before{content:"";position:absolute;inset:9px;border-radius:50%;background:white}.timer-num{position:relative;font-size:33px;color:var(--deep);font-weight:950}.timer-label{font-size:11px;color:#987789;position:relative;margin-top:-4px}.challenge-status{color:var(--ok);font-weight:900;min-height:22px}
+.closing{text-align:center}.closing-emoji{font-size:61px;margin:0 0 7px}.quote{background:white;border:1px solid #eed5e1;border-radius:20px;padding:18px;margin:16px 0;color:#982653;font-size:23px;font-weight:950;line-height:1.7}
+.summary-head{text-align:center}.summary-head .mini-heart{font-size:45px}.filter-row{display:flex;gap:8px;overflow:auto;margin:14px 0 11px;padding-bottom:2px}.filter{white-space:nowrap;padding:9px 13px;border-radius:99px;background:rgba(255,255,255,.1);color:white;border:1px solid rgba(255,255,255,.14);font-weight:800}.filter.active{background:white;color:#8c2353}.result-card{background:#fff;color:var(--ink);border:1px solid #eed7e2;border-radius:19px;padding:15px;margin:10px 0}.result-top{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-bottom:8px}.owner{padding:5px 9px;border-radius:99px;background:var(--soft);color:#8e2354;font-size:12px;font-weight:900}.qnum{font-size:11px;color:#9b8090}.result-q{color:#75596a;line-height:1.65;font-size:13px;margin-bottom:8px}.result-a{font-weight:800;line-height:1.75;white-space:pre-wrap;overflow-wrap:anywhere}.empty{font-weight:500;color:#a28b98;font-style:italic}
+.achievement{background:linear-gradient(135deg,#fff6db,#fff);border:1px solid #f0d796;color:#5d4514;border-radius:21px;padding:15px;margin:13px 0;display:flex;gap:12px;align-items:center}.achievement .badge{font-size:35px}.achievement b{display:block;margin-bottom:3px}.achievement span{font-size:12px;line-height:1.5}
+.action-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.action-grid .btn{margin:0}.toast{position:fixed;right:50%;bottom:calc(env(safe-area-inset-bottom) + 25px);transform:translateX(50%) translateY(90px);background:#fff;color:#61203f;padding:12px 17px;border-radius:99px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-weight:850;z-index:30;opacity:0;transition:.25s}.toast.show{opacity:1;transform:translateX(50%) translateY(0)}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}.confetti span{position:absolute;top:-30px;animation:fall 2.8s ease-in forwards}@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:0}}
+.install-box{margin-top:12px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:19px;padding:13px;color:#f4d3e2;font-size:12px;line-height:1.7;text-align:center}
+@media(max-width:430px){.shell{padding:12px;border-radius:25px}.card{padding:18px;border-radius:22px}.question{font-size:21px}.feature-grid{grid-template-columns:1fr 1fr}.action-grid{grid-template-columns:1fr}.logo{width:82px;height:82px}.summary-head h1{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="bg-hearts" id="bgHearts"></div>
+<div class="confetti" id="confetti"></div>
+<div class="toast" id="toast"></div>
+<div class="app"><main class="shell">
+
+<section class="screen active" id="startScreen">
+  <div class="top-actions"><button class="icon-btn" id="soundBtn" aria-label="الصوت">🔊</button><button class="icon-btn" id="helpBtn" aria-label="التثبيت">＋</button></div>
+  <div class="hero">
+    <div class="logo">❤️</div>
+    <h1>بين قلبي وقلبك</h1>
+    <div class="names"><span>روني</span><span class="heart">♥</span><span>أحمد</span></div>
+    <p class="subtitle">مساحة صغيرة تقولوا فيها كلام يمكن زحمة اليوم مبتديش فرصة يتقال.</p>
+  </div>
+  <div class="card">
+    <h2>جاهزين تقرّبوا أكتر؟</h2>
+    <p class="body-text">كل واحد هيمسك الموبايل في دوره ويجاوب لوحده. الإجابات هتفضل مخفية، وفي الآخر هتفتحوها سوا.</p>
+    <div class="feature-grid">
+      <div class="feature"><b>20</b>سؤال بينكم</div>
+      <div class="feature"><b>5</b>تحديات لطيفة</div>
+      <div class="feature"><b>🔒</b>إجابات مخفية</div>
+      <div class="feature"><b>💾</b>حفظ تلقائي</div>
+    </div>
+    <button class="btn primary" id="newBtn">ابدأوا اللعبة ❤️</button>
+    <button class="btn soft" id="continueBtn" hidden>كمّلوا من مكان ما وقفتوا</button>
+  </div>
+  <div class="install-box" id="installBox">بعد ما ترفع اللعبة وتفتح الرابط في Safari: اضغط Share ثم Add to Home Screen علشان تظهر كتطبيق.</div>
+  <p class="privacy-note">الإجابات بتتحفظ على نفس الموبايل فقط، ومش بتتبعت لأي مكان.</p>
+</section>
+
+<section class="screen" id="handoffScreen">
+  <div class="card handoff">
+    <div class="phone-orb" id="handoffIcon">📱</div>
+    <div class="small-label" id="handoffLabel"></div>
+    <div class="handoff-name" id="handoffName"></div>
+    <p class="handoff-copy" id="handoffCopy"></p>
+    <div class="privacy-lock">🔒 خلي الشاشة بعيد عن الطرف التاني</div>
+    <button class="btn primary" id="readyBtn"></button>
+  </div>
+</section>
+
+<section class="screen" id="playScreen">
+  <div class="topline"><span id="stepLabel"></span><span id="progressLabel"></span></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <div class="card" id="questionCard">
+    <div class="pill" id="turnPill"></div>
+    <div class="question" id="questionText"></div>
+    <div class="answer-wrap">
+      <textarea id="answerInput" maxlength="700" autocomplete="off" spellcheck="true"></textarea>
+      <span class="counter" id="charCounter">0 / 700</span>
+    </div>
+    <div class="hint">بعد الحفظ، الإجابة هتختفي فورًا وهتظهر شاشة تسليم الموبايل.</div>
+    <div class="error" id="answerError"></div>
+    <button class="btn primary" id="saveBtn">احفظ وناول الموبايل</button>
+    <button class="btn outline" id="skipBtn">تخطي السؤال</button>
+  </div>
+  <div class="card challenge" id="challengeCard" hidden>
+    <div class="challenge-icon">💞</div>
+    <div class="pill">تحدي للاتنين</div>
+    <div class="question" id="challengeText"></div>
+    <div class="timer-ring" id="timerRing"><div><div class="timer-num" id="timerNum"></div><div class="timer-label">ثانية</div></div></div>
+    <div class="challenge-status" id="challengeStatus"></div>
+    <button class="btn primary" id="timerBtn">ابدأوا التحدي</button>
+    <button class="btn soft" id="challengeDoneBtn" hidden>كملوا اللعبة ❤️</button>
+  </div>
+</section>
+
+<section class="screen" id="closingScreen">
+  <div class="card closing">
+    <div class="closing-emoji">🤍</div>
+    <h2>قبل ما تفتحوا الإجابات</h2>
+    <p class="body-text">بصوا لبعض، وكل واحد يقول للتاني:</p>
+    <div class="quote">شكرًا إنك في حياتي ❤️</div>
+    <p class="body-text">وبعدها خدوا حضن هادي، وافتحوا كلامكم مع بعض من غير استعجال.</p>
+    <button class="btn primary" id="revealBtn">افتحوا إجاباتكم</button>
+  </div>
+</section>
+
+<section class="screen" id="summaryScreen">
+  <div class="summary-head"><div class="mini-heart">💗</div><h1>كلام أحمد وروني</h1><p class="subtitle">اقروا كل إجابة للآخر، واسألوا بعض عن التفاصيل اللي حبيتوها.</p></div>
+  <div class="achievement" id="achievement"><div class="badge">🏆</div><div><b id="achievementTitle"></b><span id="achievementText"></span></div></div>
+  <div class="filter-row"><button class="filter active" data-filter="all">كل الإجابات</button><button class="filter" data-filter="أحمد">أحمد</button><button class="filter" data-filter="روني">روني</button></div>
+  <div id="answersList"></div>
+  <div class="action-grid">
+    <button class="btn primary" id="imageBtn">حفظ كصورة</button>
+    <button class="btn glass" id="shareBtn">مشاركة الإجابات</button>
+    <button class="btn glass" id="copyBtn">نسخ الكلام</button>
+    <button class="btn danger" id="resetBtn">ابدأوا من جديد</button>
+  </div>
+  <p class="privacy-note">قبل ما تقفلوا، قولوا لبعض مرة كمان: شكرًا إنك في حياتي ❤️</p>
+</section>
+
+</main></div>
+<script>
+const ITEMS = [{"type": "question", "owner": "روني", "text": "أول ما بتشوفي أحمد بعد ما تكونوا وحشتوا بعض، أول إحساس بيجيلك إيه؟"}, {"type": "question", "owner": "أحمد", "text": "إيه أكتر حاجة روني بتعملها وبتحسسك إنك محبوب؟"}, {"type": "question", "owner": "روني", "text": "إيه أكتر حاجة أحمد بيعملها وبتخليكي تبتسمي من غير ما تحسي؟"}, {"type": "question", "owner": "أحمد", "text": "إمتى آخر مرة بصيتِ لروني وحسيت إنك بتحبها أكتر من الأول؟"}, {"type": "challenge", "seconds": 15, "text": "بصوا لبعض من غير كلام، وبعد انتهاء الوقت كل واحد يبتسم للتاني بس."}, {"type": "question", "owner": "روني", "text": "بتحسي بإيه وإنتِ في حضن أحمد؟"}, {"type": "question", "owner": "أحمد", "text": "لما روني تكون في حضنك، إيه الإحساس اللي نفسك يوصلها من غير ما تقول كلمة؟"}, {"type": "question", "owner": "روني", "text": "لو حضن أحمد له وصف من 3 كلمات، هتوصفيه بإيه؟"}, {"type": "question", "owner": "أحمد", "text": "إيه أكتر وقت بتحس فيه إنك محتاج حضن روني؟"}, {"type": "challenge", "seconds": 20, "text": "حضن هادي، وممنوع الكلام لحد ما الوقت يخلص."}, {"type": "question", "owner": "روني", "text": "بتحسي بإيه لما تتكلموا فيديو كول وأحمد يقعد يعاكسك ويدلعك؟"}, {"type": "question", "owner": "أحمد", "text": "إيه أكتر حاجة بتحبها لما روني تدلع عليك؟"}, {"type": "question", "owner": "روني", "text": "إيه كلمة أو حركة بتحبي تعمليها علشان تدلعي أحمد وتفرحيه؟"}, {"type": "question", "owner": "أحمد", "text": "إيه أكتر حاجة روني بتعملها في الفيديو كول وبتخليك مش عايز المكالمة تخلص؟"}, {"type": "challenge", "seconds": 10, "text": "كل واحد ينادي التاني باسم الدلع المفضل عنده، مرة واحدة وبإحساس."}, {"type": "question", "owner": "روني", "text": "إيه أكتر موقف خلاكي تثقي في أحمد بجد؟"}, {"type": "question", "owner": "أحمد", "text": "إيه حاجة تقدر تعملها باستمرار علشان روني تحس بأمان وثقة أكتر معاك؟"}, {"type": "question", "owner": "روني", "text": "لما تكوني زعلانة، تحبي أحمد يسمعك، يحضنك، يدلعك، ولا يحاول يحل المشكلة؟ وليه؟"}, {"type": "question", "owner": "أحمد", "text": "إيه أكتر حاجة في علاقتكم نفسك تفضل موجودة بينكم طول العمر؟"}, {"type": "challenge", "seconds": 15, "text": "كل واحد يقول للتاني جملة تبدأ بـ: أنا بحس بالأمان معاك لما..."}, {"type": "question", "owner": "روني", "text": "إيه لحظة بينك وبين أحمد نفسك تتكرر كتير وماتخلصش بسرعة؟"}, {"type": "question", "owner": "أحمد", "text": "إيه أكتر حاجة نفسك تعملها علشان تخلي روني أسعد الفترة الجاية؟"}, {"type": "question", "owner": "روني", "text": "قولي حاجة بتحبيها في أحمد ولسه مش بتقوليها له كفاية."}, {"type": "question", "owner": "أحمد", "text": "لو هتكتب لروني رسالة من سطر واحد تحفظها طول عمرها، هتكتب إيه؟"}, {"type": "challenge", "seconds": 20, "text": "بصوا لبعض، وبعد انتهاء الوقت كل واحد يقول: أكتر حاجة خلتني أحبك أكتر الفترة الأخيرة هي..."}];
+const STORAGE_KEY='ahmedRonyPremiumHeartGameV4';
+let state=loadState();
+let soundEnabled=JSON.parse(localStorage.getItem('heartSoundEnabled') ?? 'true');
+let timerId=null,timerRemaining=0;
+const screens={start:$('#startScreen'),handoff:$('#handoffScreen'),play:$('#playScreen'),closing:$('#closingScreen'),summary:$('#summaryScreen')};
+function $(s){return document.querySelector(s)}
+function $$(s){return [...document.querySelectorAll(s)]}
+function defaultState(){return{index:0,answers:{},started:false,finished:false}}
+function loadState(){try{const v=JSON.parse(localStorage.getItem(STORAGE_KEY));if(v&&Number.isInteger(v.index)&&v.answers)return v}catch(e){}return defaultState()}
+function saveState(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}
+function show(name){Object.values(screens).forEach(s=>s.classList.remove('active'));screens[name].classList.add('active');scrollTo({top:0,behavior:'smooth'})}
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._id);t._id=setTimeout(()=>t.classList.remove('show'),2200)}
+function tone(freq=560,duration=.07){if(!soundEnabled)return;try{const ctx=new(window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=freq;o.type='sine';g.gain.setValueAtTime(.05,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+duration);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+duration)}catch(e){}}
+function vibrate(ms=22){if(navigator.vibrate)navigator.vibrate(ms)}
+function celebrate(){const box=$('#confetti');box.innerHTML='';const icons=['♥','❤','✦','♡'];for(let i=0;i<34;i++){const s=document.createElement('span');s.textContent=icons[i%icons.length];s.style.left=Math.random()*100+'%';s.style.fontSize=(13+Math.random()*22)+'px';s.style.color=['#ff7fae','#fff','#f9cf75','#ffb7d2'][i%4];s.style.animationDelay=(Math.random()*.8)+'s';s.style.animationDuration=(2.1+Math.random()*1.6)+'s';box.appendChild(s)}setTimeout(()=>box.innerHTML='',4300)}
+function seedHearts(){const b=$('#bgHearts');for(let i=0;i<15;i++){const h=document.createElement('span');h.className='bg-heart';h.textContent=i%2?'♥':'♡';h.style.left=Math.random()*100+'%';h.style.fontSize=(15+Math.random()*30)+'px';h.style.animationDuration=(10+Math.random()*12)+'s';h.style.animationDelay=(-Math.random()*15)+'s';b.appendChild(h)}}
+function qNumber(index){return ITEMS.slice(0,index+1).filter(x=>x.type==='question').length}
+function cNumber(index){return ITEMS.slice(0,index+1).filter(x=>x.type==='challenge').length}
+function answeredCount(){return Object.values(state.answers).filter(v=>String(v||'').trim()).length}
+function updateStart(){const has=state.started&&(state.index>0||state.finished);$('#continueBtn').hidden=!has;$('#continueBtn').textContent=state.finished?'شوفوا الإجابات المحفوظة':'كمّلوا من مكان ما وقفتوا';$('#soundBtn').textContent=soundEnabled?'🔊':'🔇'}
+function startNew(){if(state.started&&state.index>0&&!state.finished&&!confirm('في لعبة متسجلة بالفعل. تبدأوا من جديد وتمسحوا الإجابات القديمة؟'))return;state=defaultState();state.started=true;saveState();tone(620);showHandoff()}
+function continueGame(){state.finished?renderSummary():showHandoff()}
+function showHandoff(){const item=ITEMS[state.index];if(!item){state.finished=true;saveState();show('closing');return}const challenge=item.type==='challenge';$('#handoffIcon').textContent=challenge?'💞':'📱';$('#handoffLabel').textContent=challenge?`التحدي ${cNumber(state.index)} من 5`:`السؤال ${qNumber(state.index)} من 20`;$('#handoffName').textContent=challenge?'الدور عليكم أنتم الاتنين':`الدور على ${item.owner}`;const target=item.owner==='أحمد'?'لأحمد':'لروني';$('#handoffCopy').textContent=challenge?'خلي الموبايل بينكم؛ التحدي هيتعمل سوا.':`ناول الموبايل ${target}، وخلي الطرف التاني مايبصّش على الشاشة.`;$('#readyBtn').textContent=challenge?'إحنا جاهزين':item.owner==='روني'?'أنا روني وجاهزة':'أنا أحمد وجاهز';show('handoff')}
+function renderItem(){const item=ITEMS[state.index];if(!item){state.finished=true;saveState();show('closing');return}const completed=ITEMS.slice(0,state.index).filter(x=>x.type==='question').length;$('#progressBar').style.width=Math.round(state.index/ITEMS.length*100)+'%';$('#progressLabel').textContent=`${completed} / 20 سؤال`;if(item.type==='question'){$('#stepLabel').textContent=`السؤال ${qNumber(state.index)}`;$('#questionCard').hidden=false;$('#challengeCard').hidden=true;$('#turnPill').textContent=`الدور: ${item.owner}`;$('#questionText').textContent=item.text;$('#answerInput').value=state.answers[state.index]||'';$('#answerInput').placeholder=`${item.owner} يكتب إجابته هنا...`;$('#charCounter').textContent=$('#answerInput').value.length+' / 700';$('#answerError').textContent='';setTimeout(()=>$('#answerInput').focus(),260)}else{$('#stepLabel').textContent=`التحدي ${cNumber(state.index)}`;$('#questionCard').hidden=true;$('#challengeCard').hidden=false;$('#challengeText').textContent=item.text;resetTimer(item.seconds)}show('play')}
+function saveAnswer(){const value=$('#answerInput').value.trim();if(value.length<2){$('#answerError').textContent='اكتب إجابة صغيرة، أو اضغط تخطي.';vibrate(55);return}state.answers[state.index]=value;saveState();tone(720);vibrate();advance()}
+function skipAnswer(){state.answers[state.index]='';saveState();advance()}
+function advance(){clearInterval(timerId);state.index++;saveState();if(state.index>=ITEMS.length){state.finished=true;saveState();tone(780,.12);celebrate();show('closing')}else showHandoff()}
+function resetTimer(seconds){clearInterval(timerId);timerRemaining=seconds;$('#timerNum').textContent=seconds;$('#timerRing').style.setProperty('--angle','0deg');$('#challengeStatus').textContent='';$('#timerBtn').hidden=false;$('#timerBtn').disabled=false;$('#timerBtn').textContent='ابدأوا التحدي';$('#challengeDoneBtn').hidden=true}
+function startTimer(){const total=ITEMS[state.index].seconds;$('#timerBtn').hidden=true;tone(640);timerId=setInterval(()=>{timerRemaining--;$('#timerNum').textContent=Math.max(0,timerRemaining);$('#timerRing').style.setProperty('--angle',`${(1-timerRemaining/total)*360}deg`);if(timerRemaining<=0){clearInterval(timerId);tone(880,.15);vibrate([70,40,70]);$('#challengeStatus').textContent='التحدي خلص… حلوين أوي ❤️';$('#challengeDoneBtn').hidden=false}},1000)}
+function achievement(){const count=answeredCount();if(count===20)return['قلوب مفتوحة','جاوبتوا على كل سؤال من غير ما تسيبوا حاجة جواكم.'];if(count>=16)return['قريبين من بعض','معظم الكلام اتقال، والباقي ممكن يتكمل في حضن هادي.'];return['بداية حلوة','المهم مش عدد الإجابات؛ المهم إنكم أخدتوا خطوة ناحية بعض.']}
+function renderSummary(filter='all'){const list=$('#answersList');list.innerHTML='';let n=0;ITEMS.forEach((item,i)=>{if(item.type!=='question')return;n++;if(filter!=='all'&&item.owner!==filter)return;const v=(state.answers[i]||'').trim();const el=document.createElement('article');el.className='result-card';el.innerHTML=`<div class="result-top"><span class="owner">${escapeHtml(item.owner)}</span><span class="qnum">السؤال ${n} من 20</span></div><div class="result-q">${escapeHtml(item.text)}</div><div class="result-a ${v?'':'empty'}">${v?escapeHtml(v):'تم تخطي السؤال'}</div>`;list.appendChild(el)});const a=achievement();$('#achievementTitle').textContent=a[0];$('#achievementText').textContent=a[1];show('summary');celebrate()}
+function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+function summaryText(){let t='بين قلبي وقلبك ❤️\nإجابات أحمد وروني\n\n',n=0;ITEMS.forEach((item,i)=>{if(item.type!=='question')return;n++;t+=`${n}) ${item.text}\n${item.owner}: ${(state.answers[i]||'').trim()||'تم تخطي السؤال'}\n\n`});return t+'شكرًا إنك في حياتي ❤️'}
+async function copyText(){try{await navigator.clipboard.writeText(summaryText());toast('اتنسخ الكلام ❤️')}catch(e){toast('استخدم زر المشاركة بدل النسخ')}}
+async function shareText(){if(navigator.share){try{await navigator.share({title:'بين قلبي وقلبك ❤️',text:summaryText()});return}catch(e){if(e.name==='AbortError')return}}copyText()}
+function wrapCanvasText(ctx,text,x,y,maxWidth,lineHeight,maxLines=4){const words=String(text).split(' ');let line='',lines=[];for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=word}else line=test}if(line)lines.push(line);lines=lines.slice(0,maxLines);lines.forEach((ln,i)=>ctx.fillText(ln,x,y+i*lineHeight));return y+lines.length*lineHeight}
+function downloadImage(){const c=document.createElement('canvas');c.width=1080;c.height=1350;const x=c.getContext('2d');const g=x.createLinearGradient(0,0,1080,1350);g.addColorStop(0,'#5b1743');g.addColorStop(1,'#190a15');x.fillStyle=g;x.fillRect(0,0,c.width,c.height);x.textAlign='center';x.direction='rtl';x.fillStyle='#fff';x.font='bold 62px Arial';x.fillText('بين قلبي وقلبك ❤️',540,105);x.font='bold 40px Arial';x.fillStyle='#ffd6e7';x.fillText('أحمد  ♥  روني',540,168);x.fillStyle='#fff9fc';roundRect(x,70,220,940,1000,42);x.fill();x.fillStyle='#4a1731';x.font='bold 36px Arial';x.fillText('كلام فضل محفوظ بين قلبين',540,285);const picks=ITEMS.map((item,i)=>({item,i})).filter(o=>o.item.type==='question'&&(state.answers[o.i]||'').trim()).slice(-5);let y=350;x.textAlign='right';for(const p of picks){x.fillStyle='#a72460';x.font='bold 27px Arial';x.fillText(p.item.owner,930,y);y+=43;x.fillStyle='#755266';x.font='24px Arial';y=wrapCanvasText(x,p.item.text,930,y,800,34,2)+10;x.fillStyle='#351226';x.font='bold 27px Arial';y=wrapCanvasText(x,state.answers[p.i],930,y,800,38,3)+42;if(y>1120)break}x.textAlign='center';x.fillStyle='#a72460';x.font='bold 31px Arial';x.fillText('شكرًا إنك في حياتي ❤️',540,1170);c.toBlob(blob=>{const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='ahmed-rony-heart-game.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)},'image/png',.95)}
+function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect?ctx.roundRect(x,y,w,h,r):(ctx.rect(x,y,w,h))}
+function resetGame(){if(!confirm('متأكد إنك عايز تمسح كل الإجابات وتبدأ من جديد؟'))return;localStorage.removeItem(STORAGE_KEY);state=defaultState();updateStart();show('start');toast('اتمسحت اللعبة القديمة')}
+$('#newBtn').onclick=startNew;$('#continueBtn').onclick=continueGame;$('#readyBtn').onclick=renderItem;$('#saveBtn').onclick=saveAnswer;$('#skipBtn').onclick=skipAnswer;$('#timerBtn').onclick=startTimer;$('#challengeDoneBtn').onclick=advance;$('#revealBtn').onclick=()=>renderSummary('all');$('#copyBtn').onclick=copyText;$('#shareBtn').onclick=shareText;$('#imageBtn').onclick=downloadImage;$('#resetBtn').onclick=resetGame;$('#soundBtn').onclick=()=>{soundEnabled=!soundEnabled;localStorage.setItem('heartSoundEnabled',JSON.stringify(soundEnabled));updateStart();if(soundEnabled)tone(700);toast(soundEnabled?'الصوت اشتغل':'الصوت اتقفل')};$('#helpBtn').onclick=()=>alert('لتثبيت اللعبة على الآيفون بعد رفعها:\n1) افتح الرابط في Safari.\n2) اضغط Share.\n3) اختار Add to Home Screen.\n4) اضغط Add.');$('#answerInput').addEventListener('input',e=>{$('#charCounter').textContent=e.target.value.length+' / 700';$('#answerError').textContent=''});$$('.filter').forEach(b=>b.onclick=()=>{$$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderSummary(b.dataset.filter)});
+seedHearts();updateStart();
+</script>
+</body></html>
