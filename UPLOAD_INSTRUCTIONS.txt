@@ -1,0 +1,18 @@
+UPLOAD THESE FILES TO THE ROOT OF YOUR GITHUB REPOSITORY:
+
+index.html
+manifest.webmanifest
+icon-180.png
+icon-192.png
+icon-512.png
+favicon.png
+splash-750x1334.png
+splash-1170x2532.png
+splash-1290x2796.png
+
+Important:
+1. The main file must be named exactly index.html.
+2. Upload all files together and replace the old files.
+3. Wait 1–2 minutes, then open your Pages link with ?v=6.
+4. On iPhone, delete the old Home Screen shortcut and add it again from Safari so the new icon appears.
+5. PIN: 141218
