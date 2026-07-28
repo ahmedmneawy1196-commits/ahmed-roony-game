@@ -1,0 +1,9 @@
+AHMAD & ROONY — LIQUID STORY V7
+
+1) Upload every file in this folder to the root of your GitHub repository.
+2) Make sure the main file is named exactly: index.html
+3) Commit the changes.
+4) Open: https://ahmedmneawy1196-commits.github.io/ahmed-roony-game/?v=7
+5) Delete the old Home Screen shortcut, open the link in Safari, then Share > Add to Home Screen.
+
+PIN: 141218
