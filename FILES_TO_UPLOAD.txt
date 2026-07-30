@@ -1,0 +1,16 @@
+UPLOAD_INSTRUCTIONS.txt
+ambient-love-v12.wav
+favicon-v12.png
+icon-1024-v12.png
+icon-180-v12.png
+icon-192-v12.png
+icon-512-v12.png
+index.html
+manifest.webmanifest
+splash-1125x2436-v12.png
+splash-1170x2532-v12.png
+splash-1242x2688-v12.png
+splash-1284x2778-v12.png
+splash-1290x2796-v12.png
+splash-750x1334-v12.png
+spotify-code-v12.jpeg

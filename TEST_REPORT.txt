@@ -1,0 +1,55 @@
+AHMAD & ROONY — LIQUID STORY 12.0
+TEST REPORT — 2026-07-30
+
+FINAL STRUCTURE
+- 4 chapters
+- 12 questions total
+- Every chapter: 1 question for Roony, 1 for Ahmad, 1 private shared question
+- 4 Love Missions (one after every chapter)
+- 16 total playable cards
+- No Skip button
+
+FEATURES VERIFIED
+- PIN 141218 and attempt lockout logic
+- Random but balanced deck generation
+- 4 questions for Ahmad, 4 for Roony, 4 shared questions
+- Private shared answers: Lock Answer, phone handoff, Reveal Together
+- Secret Confession mission with two hidden answers
+- Secret Desire mission with two hidden answers and final kiss-location choice
+- Timed Love Missions
+- Local save, continue, restart and device-only progress
+- Background music file and Safari interaction-based start logic
+- Music pause while the Spotify surprise is open
+- Statistics, summary, Questions & Answers and filters
+- Share Q&A, Share Everything, Share Statistics and Share Summary
+- Private answers hidden from shared files by default
+- Copy All Answers and Save as Image
+- Final A LITTLE SECRET card with the supplied Spotify code
+- App icon, manifest and iPhone splash assets
+
+AUTOMATED TEST RESULTS
+- JavaScript syntax: PASS (node --check)
+- Runtime logic harness: PASS
+- 1,000 generated rounds: PASS
+  * 16 cards every round
+  * 12 questions and 4 missions
+  * 3 questions plus 1 mission in each chapter
+  * one Ahmad, one Roony and one Together question in every chapter
+  * unique card IDs in every round
+- Completed-round metrics: PASS
+  * 100% completion
+  * 12/12 questions
+  * 4/4 missions
+  * Ahmad 4, Roony 4, Together 4
+- Private-answer masking in shared reports: PASS
+- Pair-question and secret-mission render logic: PASS
+- Static HTML and asset checks: 57/57 PASS
+- Duplicate HTML IDs: none
+- Local file references: all present
+- PNG/JPEG integrity: PASS
+- Background WAV integrity: PASS (32.0 seconds, 22050 Hz)
+- Manifest JSON and icon references: PASS
+- Spotify image SHA-256 matches the supplied attachment: PASS
+
+LIMITATION
+A full visual iPhone/Safari run cannot be emulated perfectly in this container. Chromium rendering was unavailable because the container browser process hangs on system DBus, so the validation above covers syntax, runtime game logic, content structure, storage/share logic, and every packaged asset. After GitHub Pages deploys, open ?v=12 in Safari for the final device-level visual check.
