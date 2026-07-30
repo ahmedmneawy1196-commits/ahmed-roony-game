@@ -1,0 +1,15 @@
+ambient-love-v11.wav
+favicon-v11.png
+icon-1024-v11.png
+icon-180-v11.png
+icon-192-v11.png
+icon-512-v11.png
+index.html
+manifest.webmanifest
+splash-1125x2436-v11.png
+splash-1170x2532-v11.png
+splash-1242x2688-v11.png
+splash-1284x2778-v11.png
+splash-1290x2796-v11.png
+splash-750x1334-v11.png
+spotify-code-v11.jpeg

@@ -1,0 +1,31 @@
+AHMAD & ROONY — LIQUID STORY 11.0 TEST REPORT
+
+PASS — JavaScript syntax check (node --check)
+PASS — Full-script runtime smoke test with browser API stubs
+PASS — Deep game-flow runtime test
+PASS — 1,000 generated rounds passed order and balance checks
+PASS — 4 chapters total, including Through the Screen
+PASS — 13 questions total
+PASS — 3 Love Missions total
+PASS — 16 cards total
+PASS — Original 12 questions preserved
+PASS — Mini chapter appears after Safe With You and its first Love Mission
+PASS — Shared video-call question uses private two-turn answers
+PASS — First answer stays hidden until both answers are locked
+PASS — Reveal Together flow is present
+PASS — 6 Ahmad questions + 6 Roony questions + 1 shared question
+PASS — Private confession pair is guaranteed in Things We Don’t Say
+PASS — Secret Desire Love Mission is preserved
+PASS — Kiss-location Love Mission is preserved
+PASS — No Skip control or Skip flow exists
+PASS — PIN remains 141218
+PASS — V11 local-storage isolation
+PASS — Background music file exists and is referenced
+PASS — Spotify code file exists and is referenced
+PASS — App icons, manifest and splash screens all exist
+PASS — All local HTML asset references resolve
+PASS — Manifest start URL is ?v=11
+PASS — Completed metrics resolve to 13 questions, 3 missions and 100%
+PASS — Questions & Answers report includes both private mini-chapter answers
+
+Environment note: the installed Chromium build cannot complete a headless render in this sandbox because of DBus/zygote limitations. Syntax, runtime logic, generated-round, state, metrics, report and asset tests all passed.

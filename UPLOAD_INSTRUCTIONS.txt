@@ -1,0 +1,16 @@
+AHMAD & ROONY — LIQUID STORY 11.0
+
+1) Extract the ZIP in the iPhone Files app.
+2) Upload the FILES INSIDE the ZIP to the root of the GitHub repository.
+3) Replace the old index.html and old versioned assets with these V11 files.
+4) If Safari shows a blank page while committing, upload in three batches:
+   Batch 1: index.html, manifest.webmanifest, ambient-love-v11.wav, spotify-code-v11.jpeg
+   Batch 2: favicon-v11.png and all icon-*-v11.png files
+   Batch 3: all splash-*-v11.png files
+5) Commit directly to main.
+6) Wait 1–2 minutes, then open:
+   https://ahmedmneawy1196-commits.github.io/ahmed-roony-game/?v=11
+
+PIN: 141218
+
+To refresh the Home Screen icon, delete the old Home Screen bookmark and add the website again from Safari.
